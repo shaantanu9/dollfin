@@ -9,12 +9,14 @@ const { JWT, SESSION, OAUTH } = QUESTIONS.AUTH_TYPE;
 
 const actionFunctions: any = {
   jsexpresspgjwt: () => consola.info('Running JavaScript:Express:PostgreSQL:JWT'),
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
   jsexpresspgsession: () => consola.info('Running JavaScript:Express:PostgreSQL:SESSION'),
 
 
@@ -31,9 +33,18 @@ const createProjectSetupActions = () => {
   // Generate all combinations
   QUESTIONSLIST.LANGUAGE.forEach((language) => {
     QUESTIONSLIST.FRAMEWORK.forEach((framework) => {
+
+
+
       QUESTIONSLIST.DATABASE.forEach((database) => {
+        
+        
+        
         QUESTIONSLIST.AUTHTYPE.forEach((authType) => {
-          const key = `${language}:${framework}:${database}:${authType}`;
+        
+        
+        
+            const key = `${language}:${framework}:${database}:${authType}`;
 
           // Dynamically map functions
           const funcKey = `${language.toLowerCase()}${framework.toLowerCase()}${database.toLowerCase()}${authType.toLowerCase()}`;
