@@ -9,7 +9,17 @@ const { JWT, SESSION, OAUTH } = QUESTIONS.AUTH_TYPE;
 
 const actionFunctions: any = {
   jsexpresspgjwt: () => consola.info('Running JavaScript:Express:PostgreSQL:JWT'),
+  
+  
+  
+  
+  
+  
   jsexpresspgsession: () => consola.info('Running JavaScript:Express:PostgreSQL:SESSION'),
+
+
+
+
   jsexpresspgoauth: () => consola.info('Running JavaScript:Express:PostgreSQL:OAUTH'),
   // Add other functions here...
 };
