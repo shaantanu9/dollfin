@@ -1,6 +1,6 @@
-import consola from "consola";
-import { runProjectSetup } from "../questions/initialSetup.question";
-import { QUESTIONS, QUESTIONSLIST } from "../utils/constants";
+import consola from 'consola';
+import { runProjectSetup } from '../questions/initialSetup.question';
+import { QUESTIONS, QUESTIONSLIST } from '../utils/constants';
 
 const { JAVASCRIPT, TYPESCRIPT, GO, PYTHON } = QUESTIONS.LANGUAGE;
 const { EXPRESS, NEST, FLASK, GIN, FASTAPI, FIBER } = QUESTIONS.FRAMEWORK;
@@ -8,12 +8,9 @@ const { POSTGRESQL, MONGODB, MYSQL } = QUESTIONS.DATABASE;
 const { JWT, SESSION, OAUTH } = QUESTIONS.AUTH_TYPE;
 
 const actionFunctions: any = {
-  jsexpresspgjwt: () =>
-    consola.info("Running JavaScript:Express:PostgreSQL:JWT"),
-  jsexpresspgsession: () =>
-    consola.info("Running JavaScript:Express:PostgreSQL:SESSION"),
-  jsexpresspgoauth: () =>
-    consola.info("Running JavaScript:Express:PostgreSQL:OAUTH"),
+  jsexpresspgjwt: () => consola.info('Running JavaScript:Express:PostgreSQL:JWT'),
+  jsexpresspgsession: () => consola.info('Running JavaScript:Express:PostgreSQL:SESSION'),
+  jsexpresspgoauth: () => consola.info('Running JavaScript:Express:PostgreSQL:OAUTH'),
   // Add other functions here...
 };
 
@@ -30,9 +27,7 @@ const createProjectSetupActions = () => {
 
           // Dynamically map functions
           const funcKey = `${language.toLowerCase()}${framework.toLowerCase()}${database.toLowerCase()}${authType.toLowerCase()}`;
-          projectSetupActions[key] =
-            actionFunctions[funcKey] ||
-            (() => consola.warn(`No function for ${key}`));
+          projectSetupActions[key] = actionFunctions[funcKey] || (() => consola.warn(`No function for ${key}`));
         });
       });
     });
@@ -57,6 +52,6 @@ export const initProject = async () => {
   if (projectSetupActions[key]) {
     projectSetupActions[key]();
   } else {
-    consola.error("Invalid selection");
+    consola.error('Invalid selection');
   }
 };

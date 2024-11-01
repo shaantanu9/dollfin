@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.8.5",
+    "prettier": "3.3.3",
     "typescript": "^5.6.3"
   }
 }
