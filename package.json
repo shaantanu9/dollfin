@@ -15,6 +15,7 @@
     "cli-markdown": "^3.4.0",
     "commander": "^12.1.0",
     "consola": "^3.2.3",
+    "dotenv": "^16.4.5",
     "enquirer": "^2.4.1",
     "fs-extra": "^11.2.0",
     "inquirer": "^12.0.1",
